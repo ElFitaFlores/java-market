@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {CategoryMapper.class})
-@Repository
 public interface ProductMapper {
     @Mappings({
             @Mapping(source = "idProducto", target = "productId"),
