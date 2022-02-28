@@ -6,10 +6,12 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {PurchaseItemMapper.class})
+@Repository
 public interface PurchaseMapper {
     @Mappings({
             @Mapping(source = "idCompra", target = "purchaseId"),
